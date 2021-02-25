@@ -1,9 +1,10 @@
-site_name: My Docs
+site_name: cacheStore
+site_description: Documentation for cacheStore
+site_author: DeathToTheStadium
+site_url: https://deathtothestadium.github.io/cacheStore/
+
+nav:
+  - Home: index.md
+
 theme:
   name: material
-  - scheme: slate
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
