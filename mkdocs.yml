@@ -1,3 +1,6 @@
 site_name: My Docs
 theme:
   name: material
+  palette:
+    scheme: preference
+    primary: blue
