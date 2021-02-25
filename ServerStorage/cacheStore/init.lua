@@ -77,10 +77,11 @@ function dataSerializationlogic(index,value,parent)
 		}
 	}
 	typecheck = true
+    value = typecheck -- This Needs To Be Changed Temporary till the Serialization Configured
 	if typecheck then
 		dataValue = Instance.new(valueCheck.values[typecheck],parent)
 		dataValue.Name = index
-		dataValue.Value = Value
+		dataValue.Value = value
 	end
 end
 
