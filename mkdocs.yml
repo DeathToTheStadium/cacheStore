@@ -5,7 +5,7 @@ site_url: https://deathtothestadium.github.io/cacheStore/
 
 theme:
   name: null
-  custom_dir: resource/mkdocs-material/material
+  custom_dir: ./resource/mkdocs-material/material
 
   # 404 page
   static_templates:
