@@ -6,17 +6,17 @@
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "$ignoreUnknownInstances": true,
-      "$path": "ReplicatedStorage"
+      "$path": "./src/ReplicatedStorage"
     },
     "ServerScriptService": {
       "$className": "ServerScriptService",
       "$ignoreUnknownInstances": true,
-      "$path": "ServerScriptService"
+      "$path": "./src/ServerScriptService"
     },
     "ServerStorage": {
       "$className": "ServerStorage",
       "$ignoreUnknownInstances": true,
-      "$path": "ServerStorage"
+      "$path": "./src/ServerStorage"
     }
   }
 }
