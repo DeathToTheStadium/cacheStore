@@ -1,1 +1,3 @@
-# Documentation Home Page
+# Home
+
+## Getting Started
