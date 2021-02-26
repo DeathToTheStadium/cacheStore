@@ -1,4 +1,4 @@
-name: work
+name: ci
 on:
   push:
     branches:
