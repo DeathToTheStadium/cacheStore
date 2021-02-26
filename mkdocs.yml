@@ -2,5 +2,6 @@ site_name: cacheStore
 site_url: https://github.com/DeathToTheStadium/cacheStore
 repo_name: cacheStore
 repo_url: https://github.com/DeathToTheStadium/cacheStore
+
 theme:
   name: material
