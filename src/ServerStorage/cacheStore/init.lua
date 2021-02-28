@@ -36,20 +36,21 @@ local messagingService = game:GetService("MessagingService")
 
 --Private Functions
 function tableDeserialization(index)
-	local SerializationIDEAS = {
-		["#Name2"] = {123,232,345},-- Vector3
-		["#Name3"] = {"R:123","G:232","B:231"},-- Color3.Rgb
-		["#Name4"] = {123,232,345,232,323,123,12,12,23,34,123,123},--CFrame
-		["#Name5"] = {                              --Ray
-			{123,232,345},
-			{123,232,345}
-		},
-		["#Name6"] = "Nougat" ,--BrickColor
-		["#Name7"] = 123,      --BrickColor Using Code 
-		["#Name8"] = {"R:123","G:232","B:231"},-- Color3.Rgb
-		["#Name9"] = {"H:123","S:232","V:231"},-- Color3.Rgb
-		["Name"] = 123   -- Not the Same As ^ BrickColor Encode will be Returned As a Normal Value
-	}
+	-- local SerializationIDEAS = {
+	-- 	["#Name2"] = {123,232,345},-- Vector3
+	-- 	["#Name4"] = {123,232,345,232,323,123,12,12,23,34,123,123},--CFrame
+	-- 	["#Name5"] = {                              --Ray
+	-- 		{123,232,345},
+	-- 		{123,232,345}
+	-- 	},
+	-- 	["#Name6"] = "Nougat" ,--BrickColor
+	-- 	["#Name8"] = {},-- Color3.Rgb
+	-- 	["$instanceName"] = {
+	-- 		["Size"] = {1,3,4}
+	-- 	} --Instad of Converting it to a folder Convertes to instance
+	-- 	--Then maps Prosp
+	-- 	["Name"] = 123   -- Not the Same As ^ BrickColor Encode will be Returned As a Normal Value
+	-- }
 end
 
 function dataSerializationlogic(index,value,parent)
@@ -165,36 +166,6 @@ function profileToDataBase(self)
 	until (state == true or tries > 3)
 end
 
-local PlayerStore = {
-	["Player2"] = {},
-	["Player3"] = {},
-	["Player4"] = {},
-}
-
--- {
---     [Data] = {},
---     [Meta-Data] = {},
---     [Anayltics] = {},
--- }
-
--- {
---     Data = []
--- }
-
--- [
---     Meta-Data
--- ]
-
--- local t= {
---     ["Data1"]  = {},
---     ["Data2"]  = {},
---     ["Data3"]  = {},
---     ["Data4"]  = {},
---     ["Data5"]  = {},
---     ["Data6"]  = {[1]={}}, --OrderedDataStore
--- }
-
-
 --Object Methods
 function cacheStore.new(setup,profileStore)
 	local self = {}
@@ -268,11 +239,10 @@ function cacheStore:createCache(typecache:string,datakey)
 end
 
 function cacheStore:profileSaveToCache()
-
+	
 end
 
 function cacheStore:profileWriteToFolder()
-
 end
 
 function cacheStore:getAllProfiles()
