@@ -34,7 +34,18 @@ local cacheProfile = require("cacheStore")
 --_Variables
 
 --_Tables
-local manager = {}
+local _cacheManager = {}
+_cacheManager.maxCaches          = 5    ;
+_cacheManager.cacheMaxWrites     = 800  ;
+_cacheManager.cacheMaxRead       = 800  ;
+_cacheManager.orderedCacheReads  = 160  ;
+_cacheManager.orderedCacheWrites = 160  ;
+_cacheManager.profileWrites      = 10   ;
+_cacheManager.profileMaxRead     = 5    ;
+_cacheManager.profileAutoSave    = true ;
+_cacheManager.dbMaxChar          = 25   ;
+_cacheManager.prefixMaxChar      = 25   ;
+
 local cacheStore = createObj.new("cacheStore")
 
 --methods
@@ -46,14 +57,19 @@ local cacheStore = createObj.new("cacheStore")
 --local NAME = Object.new("NAME")
 
 function cacheStore.new()
-	local obj = cacheStore:make()
-    obj.t = 1
-    obj.cacheService = cacheService.new()
-    obj.cacheProfile = cacheProfile.new()
-	return obj
+	local self = cacheStore:make()
+    self._manager = _cacheManager
+    self.cacheService = cacheService
+    self.cacheProfile = cacheProfile.new()
+	return self
 end
 
-local newcache = cacheStore.new()
+
+local t = cacheStore.new() -- instantioan the Module
+
+t.cacheService:makeprofile()
+
+local cache = t.cacheService.new() -- Builds a Profile 
 
 
 

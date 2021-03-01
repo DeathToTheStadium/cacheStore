@@ -247,8 +247,7 @@ function compiler:dataDecompiler(Value)
 		local Count = 0
 		for _,k in pairs(val) do Count += 1; end
 		return Count
-	end
-	
+	end	
 	local function Logic(size,v)
 		if size == 1 then
 			return BrickColor.new(v[size])
