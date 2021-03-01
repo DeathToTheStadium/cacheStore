@@ -1,8 +1,7 @@
 --A Customrequire
 
 local PlacesToLook = {
-	game.ServerStorage.Modules,
-	game.ServerStorage.Util,
+	script.Parent.Parent
 }
 
 local Modules = {}

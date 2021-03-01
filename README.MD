@@ -1,3 +1,7 @@
-# SO Basically This Project is Formatted Using Rojo when there is a full Release
+# cacheStore
 
-# we will Create  a Rbxm File and Use that as the Open Sourced File
+a simple easy to use data store library that uses Profile services concepts as the base 
+for all of its saving and loading 
+
+
+This totally does not explain what this is 
